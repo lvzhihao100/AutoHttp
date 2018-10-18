@@ -1,0 +1,10 @@
+ext {
+    android = [version: "1.0.8",
+    ]
+    dependencies = [
+            /*##########################dex分包#############################*/
+            "annotation": "com.sskj.autohttp:annotation:${android["version"]}",
+            "autohttp": "com.sskj.autohttp:autohttp:${android["version"]}",
+            "compiler": "com.sskj.autohttp:compiler:${android["version"]}",
+    ]
+}

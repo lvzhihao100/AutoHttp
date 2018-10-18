@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:///home/lv/.m2/repository/")
+            pom.groupId = "com.sskj.autohttp"
+            pom.artifactId = "annotation"
+            pom.version = rootProject.ext.android["version"]
+        }
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
